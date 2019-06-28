@@ -18,6 +18,8 @@ target/
 *.cmd
 *.class
 /mvnw
+blog.iml
+
 
 
 ### NetBeans ###

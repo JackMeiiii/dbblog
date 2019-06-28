@@ -20,6 +20,7 @@ create table article
   top tinyint(1) default '0' null comment '是否置顶'
 )
   comment '文章'
+  charset = utf8
 ;
 
 create table book
@@ -47,6 +48,7 @@ create table book
   reading tinyint(1) null comment '是否阅读'
 )
   comment '图书表'
+  charset = utf8
 ;
 
 create table book_note
@@ -73,6 +75,7 @@ create table book_note
   top tinyint(1) null comment '是否置顶'
 )
   comment '笔记'
+  charset = utf8
 ;
 
 create table book_sense
@@ -86,6 +89,7 @@ create table book_sense
   update_time timestamp default CURRENT_TIMESTAMP not null comment '更新时间'
 )
   comment '读后感'
+  charset = utf8
 ;
 
 create table category
@@ -98,6 +102,7 @@ create table category
   constraint operation_category_id_uindex
   unique (id)
 )
+charset = utf8
 ;
 
 alter table category
@@ -120,6 +125,7 @@ create table comment
   type int null comment '评论类型：0文章，1，阅读'
 )
   comment '评论'
+  charset = utf8
 ;
 
 create table link
@@ -131,6 +137,7 @@ create table link
   avatar varchar(255) null comment '头像'
 )
   comment '友链'
+  charset = utf8
 ;
 
 create table log_like
@@ -144,6 +151,7 @@ create table log_like
   create_date datetime null comment '创建时间'
 )
   comment '点赞日志'
+  charset = utf8
 ;
 
 create table log_view
@@ -158,6 +166,7 @@ create table log_view
   create_date datetime null comment '创建时间'
 )
   comment '阅读日志'
+  charset = utf8
 ;
 
 create table oss_resource
@@ -168,6 +177,7 @@ create table oss_resource
   url varchar(255) null
 )
   comment '云存储资源表'
+  charset = utf8
 ;
 
 create table recommend
@@ -181,6 +191,7 @@ create table recommend
   top tinyint(1) default '0' null comment '置顶'
 )
   comment '推荐'
+  charset = utf8
 ;
 
 create table sys_menu
@@ -195,6 +206,7 @@ create table sys_menu
   order_num int null
 )
   comment '菜单管理'
+  charset = utf8
 ;
 
 create table sys_param
@@ -206,6 +218,7 @@ create table sys_param
   type varchar(255) null
 )
   comment '系统参数'
+  charset = utf8
 ;
 
 create table sys_role
@@ -218,6 +231,7 @@ create table sys_role
   create_time datetime null comment '创建时间'
 )
   comment '角色'
+  charset = utf8
 ;
 
 create table sys_role_menu
@@ -228,6 +242,7 @@ create table sys_role_menu
   menu_id bigint null comment '菜单ID'
 )
   comment '角色与菜单对应关系'
+  charset = utf8
 ;
 
 create table sys_user
@@ -241,6 +256,7 @@ create table sys_user
   create_time timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP,
   status tinyint null
 )
+charset = utf8
 ;
 
 create table sys_user_role
@@ -251,6 +267,7 @@ create table sys_user_role
   role_id bigint null comment '角色ID'
 )
   comment '用户与角色对应关系'
+  charset = utf8
 ;
 
 create table tag
@@ -261,6 +278,7 @@ create table tag
   type int null comment '所属类别：0文章，1类别'
 )
   comment '标签'
+  charset = utf8
 ;
 
 create table tag_link
@@ -272,5 +290,6 @@ create table tag_link
   type int null comment '所属类别：0文章，1阅读'
 )
   comment '标签多对多维护表'
+  charset = utf8
 ;
 

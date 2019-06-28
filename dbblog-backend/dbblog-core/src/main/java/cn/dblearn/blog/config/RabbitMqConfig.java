@@ -2,6 +2,7 @@ package cn.dblearn.blog.config;
 
 import cn.dblearn.blog.common.constants.RabbitMqConstants;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
